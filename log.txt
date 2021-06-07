@@ -24,3 +24,4 @@
     在线中文A4文档：https://wizardforcel.gitbooks.io/jqmobi-doc/content/16.html
     jqm官方英文文档：https://api.jquerymobile.com/1.4/
     一些demo：https://www.aicesu.cn/doc/jquery-mobile/
+    5.一些优美的登录注册UI界面：https://zhuanlan.zhihu.com/p/27945806
