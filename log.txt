@@ -1,0 +1,26 @@
+这是个更新日志文件，每天写完代码，都要在这里面写一下自己干了什么。也可以在这里写一些自己遇到的坑，和一些推荐写法
+
+格式样例：
+2021年6月7日 姓名
+    1.项目创立，初次提交；
+    2.实现了xx页面下的xx功能...
+    3.实现了...
+
+--正文部分--
+
+2021年6月7日 徐可
+    1.项目创立，在GitHub上面初次提交同步
+    2.jQuery mobile推荐引用方式：在你的html文档的header里粘贴如下代码：
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    3.为了让页面在移动端适应缩放，在你的html文档的header里粘贴如下代码：
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    4.在src文件夹里有个jqm的中文API文档。我浏览了一下，内容和网站上的差不多，方便快速查询api用法。但是官网的肯定更细致，这里贴出两个在线文档网站和一个demo网站，以供查询
+    在线中文A4文档：https://wizardforcel.gitbooks.io/jqmobi-doc/content/16.html
+    jqm官方英文文档：https://api.jquerymobile.com/1.4/
+    一些demo：https://www.aicesu.cn/doc/jquery-mobile/
