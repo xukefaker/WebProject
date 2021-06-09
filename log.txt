@@ -25,3 +25,13 @@
     jqm官方英文文档：https://api.jquerymobile.com/1.4/
     一些demo：https://www.aicesu.cn/doc/jquery-mobile/
     5.一些优美的登录注册UI界面：https://zhuanlan.zhihu.com/p/27945806
+
+2021年6月9日 徐可
+    1.在jsfiles文件夹里添加了一个SHA1.js，它的功能就是进行一次SHA1加密。
+    通过它，我们可以大大简化用户信息的存储，即直接存储用户名和加密后的密码（键值对）
+    2.拽了一些静态文件到src里面
+    3.毛玻璃渐变背景图生成器：meshgradient.com
+    它的使用方式：https://zhuanlan.zhihu.com/p/359763893
+    4.为了不让你的样式设置在页面跳转后失效，在你的head里面添加：
+    <script>$.mobile.ajaxEnabled = false;</script>
+    5.实现了一个简单的加载页面. load.html
