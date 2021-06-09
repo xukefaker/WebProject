@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>$.mobile.ajaxEnabled = false;</script>
+    <title>Loading...</title>
+    <style>
+        #loadpage{
+            background: url("../src/img/background_mg1.png");
+            background-size: cover;
+        }
+        #main{
+            text-align: center;
+            margin-top: 40%;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div data-role = "page" id="loadpage">
+    <div data-role="main" id="main">
+        <img src="../src/img/jxufelogo_black.png">
+        <p>努力加载中</p>
+    </div>
+</div>
+
+</body>
+</html>
