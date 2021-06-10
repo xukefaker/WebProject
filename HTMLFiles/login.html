@@ -13,14 +13,70 @@
     <script>$.mobile.ajaxEnabled = false;</script>
     <title>Login</title>
     <style>
-        #page{
+        #page {
             background: url("../src/img/background_mg2.png");
             background-size: cover;
         }
-        #main{
+
+        #main {
             text-align: center;
-            margin-top: 30%;
+            margin-top: 20%;
             color: black;
+        }
+
+        #cuplogo {
+            width: 183px;
+            height: 113px;
+        }
+
+        #inputform {
+            margin: 20% auto 0;
+            width: 70%;
+        }
+
+        .user-box {
+            position: relative;
+            height: 60px;
+        }
+
+        .box-icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 5px;
+            top: 14px;
+        }
+
+        #username, #userpwd {
+            font-size: 1.5em;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .ui-input-text {
+            background-color: rgba(255, 255, 255, 0) !important;
+        }
+
+        .ui-btn {
+            width: 80%;
+            margin: 20% auto 0;
+            color: white;
+            background-color: rgba(0,0,0,0) !important;
+        }
+
+        #signup {
+            background: rgb(255, 0, 0);
+            color: white !important;
+        }
+        #QQlogin, #register{
+            font-size: 18px;
+            background: rgba(69, 74, 90, 0.11) !important;
+            border-color: rgba(0,0,0,0) !important;
+            width: 83.5%;
+            margin-bottom: 2px;
+        }
+        .ui-footer{
+            background-color: rgba(0,0,0,0) !important;
+            border-color: rgba(0,0,0,0) !important;
         }
 
     </style>
@@ -28,7 +84,24 @@
 <body>
 <div data-role="page" id="page">
     <div data-role="main" id="main">
-
+        <img src="../src/img/teacup.png" id="cuplogo">
+        <div id="inputform">
+            <div class="user-box">
+                <input type="text" id="username">
+                <img src="../src/img/icon_user.png" class="box-icon">
+            </div>
+            <div class="user-box">
+                <input type="password" id="userpwd">
+                <img src="../src/img/icon_lock.png" class="box-icon">
+            </div>
+        </div>
+        <input type="button" value="登录" id="signup">
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <ul data-role="listview">
+            <li><a href="#" id="QQlogin">通过QQ登录</a></li>
+            <li><a href="#" id="register">第一次使用？前往注册</a></li>
+        </ul>
     </div>
 </div>
 

@@ -35,3 +35,6 @@
     4.为了不让你的样式设置在页面跳转后失效，在你的head里面添加：
     <script>$.mobile.ajaxEnabled = false;</script>
     5.实现了一个简单的加载页面. load.html
+
+2021年6月10日 徐可
+    1.实现了简单的登录界面
