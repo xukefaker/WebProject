@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>$.mobile.ajaxEnabled = false;</script>
+    <title>Who are you?</title>
+    <style>
+        #page {
+            background: url("../src/img/background_mg3.png");
+            background-size: cover;
+        }
+
+        #main {
+            text-align: center;
+            margin-top: 20%;
+            color: black;
+        }
+
+        #inputform {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .ui-input-text {
+            margin-bottom: 5% !important;
+            background-color: rgba(255, 255, 255, 0) !important;
+        }
+
+        #username, #userpwd, #checkpwd {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        label {
+            font-size: 20px !important;
+            font-weight: 700 !important;
+        }
+
+        .input-hint {
+            display: inline-block;
+        }
+
+        .ui-btn {
+            width: 80%;
+            margin: 10px auto 0;
+            color: white;
+            background-color: rgba(0, 0, 0, 0) !important;
+        }
+
+    </style>
+</head>
+<body>
+<div data-role="page" id="page">
+    <div data-role="main" id="main">
+        <img src="../src/img/boy1.png" id="boyimg">
+        <div class="ui-field-contain" id="inputform">
+            <label for="username">用户名</label>
+            <div class="input-hints">
+                <div class="input-hint" id="hint1">长度8-15</div>
+                <div class="input-hint" id="hint2">以字母开头</div>
+                <div class="input-hint" id="hint3">仅字母、数字、下划线</div>
+            </div>
+            <input id="username" type="text">
+            <label for="userpwd">密码</label>
+            <div class="input-hint" id="hint4">长度6-8位</div>
+            <input id="userpwd" type="password">
+            <label for="checkpwd">确认密码</label>
+            <div class="input-hint" id="hint5">两次输入不一致</div>
+            <input id="checkpwd" type="password">
+        </div>
+        <input type="button" value="确认" id="signup">
+        <input type="button" value="返回登录界面" id="back">
+    </div>
+</div>
+<script>
+    var nameValid = false;
+    var pwdValid = false;
+    var checkPwdValid = false;
+    var signUpAllow = nameValid && pwdValid && checkPwdValid;
+    $(document).ready(function () {
+        //用户名输入检测
+        $("#username").on("input", function (e) {
+            verifyName(e.target.value);
+            setSignUpBtn();
+        });
+        //密码输入检测
+        $("#userpwd").on("input", function (e) {
+            verifyPwd(e.target.value);
+            verifyCheckPwd($("#checkpwd").val());
+            setSignUpBtn();
+        });
+        $("#checkpwd").on("input", function (e){
+           verifyCheckPwd(e.target.value);
+            setSignUpBtn();
+        });
+    });
+
+    function verifyName(s) {
+        let nameInput = s;
+        let lengthValid = /^[\s\S]{8,15}$/.test(nameInput);
+        let startValid = /^[a-zA-Z]$/.test(nameInput.charAt(0));
+        let charTypeValid = /\W+/.test(nameInput);
+        $("#hint1").css("color", lengthValid ? "black" : "red");
+        $("#hint2").css("color", startValid ? "black" : "red");
+        $("#hint3").css("color", charTypeValid ? "red" : "black");
+        nameValid = lengthValid && startValid && !charTypeValid;
+    }
+    function verifyPwd(s){
+        pwdValid = /^[\s\S]{6,8}$/.test(s);
+        $("#hint4").css("color", pwdValid ? "black" : "red");
+    }
+    function verifyCheckPwd(s){
+        let checkPwdInput = s;
+        let pwdInput = $("#userpwd").val();
+        checkPwdValid = checkPwdInput === pwdInput;
+        $("#hint5").css({"color" : checkPwdValid ? "black" : "red", "visibility" : checkPwdValid ? "hidden" : "visible"});
+    }
+    //根据三个检测结果，设置注册确认按钮样式
+    function setSignUpBtn(){
+        signUpAllow = nameValid && pwdValid && checkPwdValid;
+        console.log("1 " + nameValid + " 2 " + pwdValid + " 3 " + checkPwdValid);
+        console.log(!signUpAllow);
+        $("#signup").attr("disabled", !signUpAllow);
+        $("#signup").css("background-color", signUpAllow ? "rgba(0, 0, 0, 0)" : "rgb(0, 0, 0)")
+    }
+</script>
+
+</body>
+</html>
