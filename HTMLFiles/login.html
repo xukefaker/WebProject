@@ -62,6 +62,16 @@
             color: white;
             background-color: rgba(0,0,0,0) !important;
         }
+        .ui-listview{
+            height: 100%;
+        }
+        .ui-listview >li{
+            height: 45%;
+        }
+        .ui-listview > li > a{
+            height: 65%;
+            vertical-align: center;
+        }
 
         #signup {
             background: rgb(255, 0, 0);
@@ -97,7 +107,7 @@
         </div>
         <input type="button" value="登录" id="signup">
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" style="height: 20%">
         <ul data-role="listview">
             <li><a href="#" id="QQlogin">通过QQ登录</a></li>
             <li><a href="#" id="register">第一次使用？前往注册</a></li>

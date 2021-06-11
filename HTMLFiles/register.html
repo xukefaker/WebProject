@@ -45,7 +45,9 @@
         }
 
         .input-hint {
-            display: inline-block;
+            display: none;
+            color: #d48d63;
+            font-weight: 700;
         }
 
         .ui-btn {
@@ -60,7 +62,7 @@
 <body>
 <div data-role="page" id="page">
     <div data-role="main" id="main">
-        <img src="../src/img/boy1.png" id="boyimg">
+        <img src="../src/img/boy1.png" id="boyimg" style="width: 100px; height: 100px">
         <div class="ui-field-contain" id="inputform">
             <label for="username">用户名</label>
             <div class="input-hints">
@@ -108,20 +110,20 @@
         let lengthValid = /^[\s\S]{8,15}$/.test(nameInput);
         let startValid = /^[a-zA-Z]$/.test(nameInput.charAt(0));
         let charTypeValid = /\W+/.test(nameInput);
-        $("#hint1").css("color", lengthValid ? "black" : "red");
-        $("#hint2").css("color", startValid ? "black" : "red");
-        $("#hint3").css("color", charTypeValid ? "red" : "black");
+        $("#hint1").css("display", lengthValid ? "none" : "inline-block");
+        $("#hint2").css("display", startValid ? "none" : "inline-block");
+        $("#hint3").css("display", charTypeValid ? "inline-block" : "none");
         nameValid = lengthValid && startValid && !charTypeValid;
     }
     function verifyPwd(s){
         pwdValid = /^[\s\S]{6,8}$/.test(s);
-        $("#hint4").css("color", pwdValid ? "black" : "red");
+        $("#hint4").css("display", pwdValid ? "none" : "inline-block");
     }
     function verifyCheckPwd(s){
         let checkPwdInput = s;
         let pwdInput = $("#userpwd").val();
         checkPwdValid = checkPwdInput === pwdInput;
-        $("#hint5").css({"color" : checkPwdValid ? "black" : "red", "visibility" : checkPwdValid ? "hidden" : "visible"});
+        $("#hint5").css({"display" : checkPwdValid ? "none" : "inline-block"});
     }
     //根据三个检测结果，设置注册确认按钮样式
     function setSignUpBtn(){
