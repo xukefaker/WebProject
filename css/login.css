@@ -1,0 +1,153 @@
+/* 设置默认样式 */
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",
+      STXihei, hei;
+    color: #000;
+    /* background: #f2f2f2; */
+    /* 不出现水平滚动条 */
+    overflow-x: hidden;
+    /* 设置盒子阴影 */
+    -webkit-tap-highlight-color: transparent;
+    /* 测试用高度 */
+    height: 600px;
+    background: url(../pic/background_mg2.png);
+    background-repeat:no-repeat;
+    -moz-background-size:100% 100%;  
+    background-size:100% 100%;  
+    width: 100%;
+    overflow: hidden;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #222;
+  }
+  img {
+    display: block;
+  }
+  
+  /* 顶部搜索 部分- */
+  .welcome-head {
+    /* background-image: linear-gradient(25deg, #5b33ad, #9b4791, #c95f73, #f17951);
+     */
+  
+     
+    height: 44px;
+    width: 100%;
+    /* 固定定位与父级没有关系，它以屏幕为准 */
+    position: fixed;
+    top: 0;
+  
+    /* background-color: pink; */
+    min-width: 320px;
+    max-width: 540px;
+    /* 因为 定位设为 fixed 故 margin: 0 auto 无效（无法让其居中） */
+    /* margin: 0 auto; */
+    /* 通过left:50% （定位边界是屏幕）和 transform: translateX(-50%);使得该盒子居中 */
+    left: 50%;
+    /* -webkit-transform: translateX(-50%);兼容老浏览器 */
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: flex;
+  
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+  }
+  .welcome-head li {
+    text-align: center;
+    line-height: 44px;
+    padding-left: 20px;
+  }
+  .welcome-head .label {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    font-size: 25px;
+    color: #3f2323;
+  }
+  .container {
+    height: 100%;
+    /* background-image: linear-gradient(25deg, #5b33ad, #9b4791, #c95f73, #f17951);
+     */
+ 
+  }
+  .login-wrapper {
+    /* background-color: #fff; */
+    /* background-image: url("pic/login1.png"); */
+    /* background: #eee url(../pic/login1.png) no-repeat; */
+    width: 260px;
+    height: 430px;
+    padding: 0 30px;
+    border-radius: 30px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .login-wrapper .header {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    color: #b49d3e;
+    text-align: center;
+  }
+  .errorMsg{
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+    height: 20px;
+  }
+  .login-wrapper .form-wrapper .input-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0;
+    padding: 10px;
+    border-bottom: 1px solid rgb(131, 119, 119);
+    outline: none;
+    margin-left: 10px;
+  }
+  .login-wrapper .form-wrapper .btn {
+    text-align: center;
+    padding: 5px;
+    background: #4f9dd1;
+    width: 100%;
+    color: rgb(39, 8, 8);
+    margin-top: 30px;
+    cursor: pointer;
+    border: #4f9dd1 solid 1px;
+    font-weight: bolder;
+  }
+  .login-wrapper .msg {
+    text-align: center;
+    line-height: 30px;
+  }
+  .login-wrapper .msg a {
+    text-decoration: none;
+    color: rgb(140, 39, 150);
+  }
+  .msg_cont b {
+ 
+    display: block;
+  
+    height: 17px;
+    left: 30px;
+    margin-top: -15px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+  }
+  

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script/jquery-1.7.2.js"></script>
+
+</head>
+
+
+<body>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>$("input").attr("data-role", "none"); //去除JQuery Mobile中的默认input样式</script>
+    <link rel="stylesheet" href="./css/login.css"> -->
+    <!-- 顶部搜索 部分-->
+    <div class="welcome-head">
+        <li>
+
+        </li>
+        <span class="label">欢迎用户登录</span>
+        <li>
+            <a title="back"><span class="back"></span> <span></span></a>
+        </li>
+    </div>
+
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="header"><img src="./pic/teacup.png" width="150px" height="100px" style="margin-left: 60px;">
+            </div>
+            <div class="msg_cont">
+                <b></b>
+                <span id="msg" class="errorMsg">&nbsp;</span>
+            </div>
+            <div class="form-wrapper">
+                <div style="display: flex;"><img src="./pic/icon_user.png" width="35px" height="35px"> <input
+                        id="username" type="text" name="username" placeholder="用户名" class="input-item" /></div>
+                <div style="display: flex;"><img src="./pic/icon_lock.png" width="35px" height="35px"> <input
+                        id="password" type="text" name="password" placeholder="密码" class="input-item" /></div>
+                <input type="button" class="btn" id="signIn" value="登录">
+            </div>
+            <div class="msg">你没有账号吗？&nbsp;<a href="register.html">注册</a></div>
+        </div>
+    </div>
+    <!-- 显示的时间弹窗的div -->
+    <div id="date"></div>
+    
+</body>
+<script src="./script/base.js"></script>
+<script src="./script/login.js"></script>
+ 
+</html>
